@@ -8,6 +8,7 @@
       // echo $db_query; 
       $result = $link->query($db_query);
       
+      
   }
 
 
@@ -18,7 +19,8 @@ if (isset($_GET['btn-save2'])){
       $db_query = "INSERT INTO `phrases` (`ID`, `text`, `insertdate`) VALUES (NULL, '" . $text . "', NOW());";
       // echo $db_query; 
       $result = $link->query($db_query);
-      
+     // echo mysqli_error($link);
+      // header("Location:phrase_read.php");
   }
 
 
